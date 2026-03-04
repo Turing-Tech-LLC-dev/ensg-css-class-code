@@ -11,7 +11,7 @@
     height: 150px;
     border: 3px solid lab(57% 69.38 68.71);
     /* margin: 16px 30px 50px 80px; */
-    /* padding: 16px 72px 90px 130px; */
+    padding: 16px 72px 90px 130px;
 }
 
 .box > div {

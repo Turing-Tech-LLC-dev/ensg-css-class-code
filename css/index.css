@@ -1,0 +1,66 @@
+/* Universal Selector */
+*{
+   background-color: antiquewhite; 
+}
+
+/* Element Selector */
+h2 {
+    color: blue;
+}
+
+/* Class Selector */
+.text {
+    color: gold;
+}
+
+/* Id Selector */
+#text {
+    color: red;
+}
+
+/* Descendant Selector */
+.intro p {
+    color: chartreuse;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+div p {
+    color: purple;
+    font-size: 10px;
+}
+
+/* Group Selector */
+p, a, span{
+    color: aqua;
+}
+
+.action p,
+.action a,
+.action span,
+.blog p {
+    color: cornflowerblue;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#intro-text {
+    color: brown;
+    font-weight: 900;
+}
+
+.intro-text {
+    color: indigo;
+    font-size: 40px;
+}
+
+/* Child Selector */
+.container > h2{
+    color: teal;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container > * {
+    color: red;
+}

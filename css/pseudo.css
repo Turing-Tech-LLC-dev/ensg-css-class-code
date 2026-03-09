@@ -1,0 +1,83 @@
+h1 {
+    color: blue;
+    text-decoration: underline;
+}
+
+h1:hover {
+    color: brown;
+    text-decoration: none;
+}
+
+button {
+    background-color: gold;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+    /* scale: 1.05; */
+    cursor: no-drop;
+}
+
+button:active {
+    transform: translateX(12px);
+    background-color: brown;
+}
+
+input {
+    display: block;
+    margin: 1rem 0;
+    height: 1.5rem;
+    padding: 0 5px;
+    font-size: 14px;
+    outline: 0;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+input::placeholder {
+    color: brown;
+}
+
+ul li:first-child {
+    color: red;
+}
+
+ul li:last-child {
+    color: cornflowerblue;
+    font-weight: 800;
+}
+
+.box p:first-child{
+    color: red;
+}
+
+.box p:last-child {
+    color: aqua;
+    font-weight: 900;
+}
+
+.box2 a:nth-child(4) {
+    color: green;
+}
+
+.box2 p:nth-child(7) {
+    color: brown;
+}
+
+ul li:nth-child(even) {
+    color: gold;
+}
+
+ul li:nth-child(odd) {
+    color: purple;
+}

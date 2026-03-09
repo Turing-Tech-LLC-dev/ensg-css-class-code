@@ -81,3 +81,47 @@ ul li:nth-child(even) {
 ul li:nth-child(odd) {
     color: purple;
 }
+
+.box3 {
+    border: 1px solid black;
+    padding: 32px 16px;
+    background-image: url("../image/man-on-computer.jpg");
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+.box3 p {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.box3 p::before {
+    content: "Beginning text ";
+    color: gold;
+    font-weight: 600;
+}
+
+.box3 p::after {
+    content: " End of sentence";
+    color: white;
+    font-weight: 600;
+}
+
+.box3::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+p.sentence::first-letter {
+    font-size: 70px;
+    font-weight: 900;
+    color: brown;
+}

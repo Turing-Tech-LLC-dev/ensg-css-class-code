@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 p.text1 {
     font-size: 16px;
 }
@@ -14,4 +20,28 @@ p.text1 span {
 /* By default 1rem = 16px */
 p.text2 {
     font-size: 2rem;
+}
+
+.box {
+    width: 100%;
+    background-color: gray;
+}
+
+.box div {
+    background-color: green;
+    color: white;
+    width: 50%;
+} 
+
+.box1 {
+    width: 100vw;
+    background-color: antiquewhite;
+    height: 100vh;
+}
+
+.box1 div {
+    background-color: brown;
+    color: white;
+    width: 50%;
+    height: 50%;
 }

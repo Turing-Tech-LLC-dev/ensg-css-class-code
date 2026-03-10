@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+top
+bottom
+left
+right
+
+inset: This uses all 4 at a time
+*/
+
+/* .box1 a {
+    position: relative;
+    top: 30px;
+    left: 20px;
+
+} */
+
+.box2 {
+    border: 2px solid black;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+}
+
+.box2 div {
+    width: 100px;
+    height: 50px;
+}
+
+.box2 div:nth-child(1) {
+    background-color: blue;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.box2 div:nth-child(2) {
+    background-color: gold;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.box2 div:nth-child(3) {
+    background-color: brown;
+    color: white;
+}

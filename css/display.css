@@ -1,0 +1,17 @@
+/* a {
+    display: block;
+}
+
+p,div,section {
+    display: inline;
+} */
+
+span {
+    background-color: gold;
+    width: 100%;
+    display: inline-block;
+}
+
+p {
+    display: none;
+}

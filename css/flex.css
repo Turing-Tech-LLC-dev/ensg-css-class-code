@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box1 {
+    display: inline-flex;
+}
+
+.box2 {
+    border: 2px solid black;
+    display: flex;
+    gap: 5px;
+    /* flex-direction: column; */
+    
+}
+
+.box2 div {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+}

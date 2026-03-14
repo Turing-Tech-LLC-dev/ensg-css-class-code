@@ -1,106 +1,125 @@
+/* Reset some default browser styles and apply a common font */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* removes default margin */
+    padding: 0; /* removes default padding */
+    box-sizing: border-box; /* includes padding and border in element width/height */
+    font-family: Arial, Helvetica, sans-serif; /* sets the font for the whole page */
 }
 
-/* header */
+/* header styling */
+
+/* This adds a background color to the header element and makes the header stick to the top when scrolling */
 header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    width: 100%;
-    background-color: #f6f6f6;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* adds a light line under the header */
+    position: sticky; /* keeps the header visible when scrolling */
+    top: 0; /* positions the header at the top of the page */
+    z-index: 50; /* ensures the header stays above other elements */
+    width: 100%; /* makes the header span the full width */
+    background-color: #f6f6f6; /* sets the background color */
 }
 
+/* Styles the navigation container inside the header */
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    display: flex; /* places items in a row */
+    justify-content: space-between; /* puts space between logo and menu */
+    align-items: center; /* vertically centers the items */
+    padding: 1rem; /* adds space inside the navigation */
 }
 
+/* Styles the unordered list that holds the navigation links */
 header ul {
-    display: flex;
-    gap: 1.5rem;
+    display: flex; /* displays the list items in a row */
+    gap: 1.5rem; /* adds space between each menu item */
 }
 
+/* Removes the default bullet points from the list */
 header ul li {
     list-style-type: none;
 }
 
+/* Styles the navigation links */
 header a {
-    text-decoration: none;
-    color: blue;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    text-decoration: none; /* removes underline from links */
+    color: blue; /* sets link color */
+    font-weight: 600; /* makes the text slightly bold */
+    transition: color 0.3s ease-in-out; /* smooth color change on hover */
 }
 
+/* Changes link style when the mouse hovers over it */
 header a:hover {
-    text-decoration: underline;
-    color: brown;
+    text-decoration: underline; /* adds underline */
+    color: brown; /* changes color */
 }
 
+/* Styles the heading inside the header (usually the logo/title) */
 header h1 {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* sets the text size */
 }
 
 
-/* courses */
+/* courses section */
+
+/* Main container for the courses section */
 .courses {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    margin-top: 2rem; /* adds space above the section */
+    display: flex; /* enables flex layout */
+    flex-direction: column; /* stacks items vertically */
+    gap: 1.5rem; /* adds space between elements */
 }
 
+/* Styles the introduction area of the courses section */
 .courses-intro {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    flex-direction: column; /* places intro elements vertically */
+    align-items: center; /* centers them horizontally */
+    gap: 5px; /* small space between elements */
 }
 
+/* Container that holds the course cards */
 .courses-content {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    display: flex; /* places course cards in a row */
+    justify-content: center; /* centers them horizontally */
+    gap: 2rem; /* adds space between the cards */
 }
 
+/* Styles each individual course card */
 .courses-content > div {
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5); /* adds a border around each card */
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem 1rem;
-    border-radius: 15px;
+    flex-direction: column; /* stacks card content vertically */
+    gap: 1rem; /* adds space between elements inside the card */
+    padding: 2rem 1rem; /* adds space inside the card */
+    border-radius: 15px; /* rounds the corners */
 }
 
+/* Changes the background color of a card when hovered */
 .courses-content > div:hover {
     background-color: brown;
 }
 
+/* Changes the text color inside the card when hovered */
 .courses-content > div:hover h3,
 .courses-content > div:hover p {
     color: white;
 }
 
+/* Styles paragraph text inside the courses section */
 .courses p {
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* slightly smaller text */
 }
 
+/* Styles the course buttons/links */
 .courses a {
-    background-color: blue;
-    color: white;
-    text-decoration: none;
-    align-self: flex-start;
-    font-size: 0.9rem;
-    padding: 5px 10px;
-    border-radius: 15px;
+    background-color: blue; /* button background color */
+    color: white; /* text color */
+    text-decoration: none; /* removes underline */
+    align-self: flex-start; /* aligns the button to the left */
+    font-size: 0.9rem; /* button text size */
+    padding: 5px 10px; /* adds space inside the button */
+    border-radius: 15px; /* rounds the button edges */
 }
 
+/* Changes button color when hovered */
 .courses a:hover {
     background-color: brown;
 }

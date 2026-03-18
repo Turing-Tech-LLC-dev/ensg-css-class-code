@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* 
 Note the width of the grid container
 
@@ -43,6 +49,9 @@ Ex: 1000px - 32px = 968px
 .box2 div {
     background-color: blue;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box2 div:nth-child(1) {
@@ -78,4 +87,56 @@ Ex: 1000px - 32px = 968px
 .box2 div:nth-child(5) {
     grid-column: 3 / 5;
     grid-row: 3 / 4;
+}
+
+/* Align Items */
+.box3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-auto-rows: 100px;
+    align-items: center;
+}
+
+.box3 div {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem 0.5rem; */
+}
+
+/* Align content */
+.box4 {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-template-rows: 50px 50px;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-auto-rows: 100px;
+    height: 300px;
+    border: 3px solid black;
+    align-content: center;
+    /* align-items: center; */
+    justify-items: center;
+    justify-content: center;
+}
+
+.box4 div {
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem 0.5rem; */
+}
+
+.box4 div:nth-child(2) {
+    /* align-self: end; */
+    justify-self: end;
 }

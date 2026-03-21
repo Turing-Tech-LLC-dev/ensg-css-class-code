@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn1 {
+    border: 1px solid black;
+    margin: 1rem;
+    background-color: blue;
+    color: white;
+    padding: 0.6rem 3rem;
+    cursor: pointer;
+    transform: skew(-10deg);
+    transition: all 0.9s ease;
+}
+
+.btn1:hover {
+    background-color: gold;
+    color: black;
+    transform: rotate(10deg);
+}
+
+/* 
+Make an element move horizontally
+*/
+
+.btn2 {
+    border: 1px solid black;
+    margin: 1rem;
+    background-color: blue;
+    color: white;
+    padding: 0.6rem 3rem;
+    cursor: pointer;
+    animation: fade-in 2s ease-in-out 3s ;
+    /* transform: skew(-10deg); */
+    /* transition: all 0.9s ease; */
+}
+
+.btn2:hover {
+    background-color: gold;
+    color: black;
+    /* transform: rotate(10deg); */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 
+- square 
+
+1. bg to gold and fade in 
+2. change to circle and bg to red
+3. Make bounce
+4. move horizontal
+5. make square and rotate 360 
+6. bg to brown 
+
+*/
+
+.effect {
+    width: 10rem;
+    height: 10rem;
+    background-color: brown;
+    margin: 0 1rem;
+    animation: effect 15s ease-in-out 3s infinite;
+}
+
+@keyframes effect {
+    0% {
+        background-color: gold;
+        opacity: 0.3;
+    }
+
+    10%, 25% {
+        border-radius: 50%;
+        background-color: red;
+    }
+
+    35% {
+        transform: translateY(3rem);
+    }
+
+    40% {
+        transform: translateY(0) translateX(10rem);
+    }
+
+    70% {
+        border-radius: 0;
+        transform: rotate(360deg);
+    }
+
+    100% {
+        background-color: brown;
+    }
+}

@@ -101,3 +101,34 @@ Make an element move horizontally
         background-color: brown;
     }
 }
+
+.scroll {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    font-size: 9px;
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-transform: uppercase;
+    position: fixed;
+    right: 1rem;
+    animation: bounce 3s ease-in-out 1s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

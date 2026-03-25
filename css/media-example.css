@@ -1,475 +1,580 @@
+/* ========================================
+   UNIVERSAL RESET STYLES
+   ======================================== */
+
+/* Universal selector (*) targets ALL elements on the page */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: Arial, Helvetica, sans-serif; /* Set default font for entire page */
 }
 
+/* Remove bullet points from all list items */
 ul li {
-    list-style-type: none;
+    list-style-type: none; /* No bullets or numbers on list items */
 }
 
+/* Remove underline from all links */
 a {
-    text-decoration: none;
+    text-decoration: none; /* Links won't have underlines */
 }
 
-/* Navigation Bar */
+/* ========================================
+   NAVIGATION BAR (HEADER)
+   ======================================== */
+
+/* Main header container */
 header {
-    width: 100%;
-    height: 4.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    background-color: #f6f6f6;
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    width: 100%; /* Full width of the viewport */
+    height: 4.5rem; /* Fixed height (1rem = 16px, so 4.5rem = 72px) */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* Bottom border with 30% opacity black */
+    background-color: #f6f6f6; /* Light gray background */
+    position: sticky; /* Stays fixed when scrolling past it */
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 50; /* Ensures header appears above other content (higher number = closer to viewer) */
 }
 
+/* Navigation container inside header */
 header nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 0 1rem;
+    width: 100%; /* Full width of header */
+    height: 100%; /* Full height of header */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Push items to far left and far right */
+    align-items: center; /* Vertically center all items */
+    position: relative; /* Allows absolute positioning of child elements */
+    padding: 0 1rem; /* No top/bottom padding, 1rem (16px) left/right padding */
 }
 
+/* Hide desktop navigation links and signup button on mobile */
 header .desktop-nav-links,
 header nav > a {
-    display: none;
+    display: none; /* Completely hide these elements */
 }
 
+/* ========================================
+   LOGO STYLES
+   ======================================== */
+
+/* Logo container */
 .logo {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
+    display: flex; /* Use flexbox to arrange logo items horizontally */
+    gap: 0.5rem; /* Space between logo icon and text (8px) */
+    align-items: center; /* Vertically center logo items */
 }
 
+/* Logo icon (first child) */
 .logo span:nth-child(1) {
-    background-color: blue;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 5px;
+    background-color: blue; /* Blue background */
+    color: white; /* White text color */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    width: 2rem; /* 32px width */
+    height: 2rem; /* 32px height (makes it a square) */
+    border-radius: 5px; /* Slightly rounded corners */
 }
 
+/* Logo text (second child) */
 .logo span:nth-child(2) {
-    font-weight: 600;
+    font-weight: 600; /* Semi-bold text */
 }
 
+/* ========================================
+   MOBILE NAVIGATION DROPDOWN
+   ======================================== */
+
+/* Mobile dropdown menu */
 .mobile ul.mobile-dropdown {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background-color: #f6f6f6;
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    width: 60%;
-    max-width: 12rem;
-    height: calc(100vh - 4.5rem);
-    padding: 2rem 1rem;
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
+    position: absolute; /* Position relative to the nearest positioned ancestor (nav) */
+    right: 0; /* Align to the right edge */
+    top: 100%; /* Position just below the header (100% of header height) */
+    background-color: #f6f6f6; /* Same light gray as header */
+    border-left: 1px solid rgba(0, 0, 0, 0.3); /* Left border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* Bottom border */
+    border-top: 1px solid rgba(0, 0, 0, 0.3); /* Top border */
+    width: 60%; /* 60% of parent width */
+    max-width: 12rem; /* Maximum width of 192px */
+    height: calc(100vh - 4.5rem); /* Full viewport height minus header height */
+    padding: 2rem 1rem; /* 2rem (32px) top/bottom, 1rem (16px) left/right */
+    display: none; /* Hidden by default (will show with JavaScript) */
+    flex-direction: column; /* Stack items vertically when visible */
+    gap: 1.5rem; /* 24px space between menu items */
 }
 
+/* Mobile menu link styles */
 .mobile a {
-    color: black;
-    font-weight: 500;
-    font-size: 0.95rem;
+    color: black; /* Black text */
+    font-weight: 500; /* Medium font weight */
+    font-size: 0.95rem; /* Slightly smaller than 1rem (15.2px) */
 }
 
+/* Fourth menu item (Sign Up button) in mobile dropdown */
 ul.mobile-dropdown li:nth-child(4) a {
-    background-color: blue;
-    color: white;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    padding: 0.4rem 0;
-    border-radius: 5px;
+    background-color: blue; /* Blue background */
+    color: white; /* White text */
+    display: inline-block; /* Makes padding work on inline element */
+    width: 100%; /* Full width of parent */
+    text-align: center; /* Center text horizontally */
+    padding: 0.4rem 0; /* 6.4px top/bottom, no left/right */
+    border-radius: 5px; /* Rounded corners */
 }
 
+/* Mobile menu toggle button */
 .mobile button {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* 17.6px font size */
 }
 
-/* Hero */
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+/* Hero/banner section */
 .hero {
-    width: 100%;
-    min-height: calc(100vh - 4.5rem);
-    background-image: url("../image/man-on-computer.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+    width: 100%; /* Full viewport width */
+    min-height: calc(100vh - 4.5rem); /* Minimum height = viewport height minus header */
+    background-image: url("../image/man-on-computer.jpg"); /* Background image path */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    background-size: cover; /* Scale image to cover entire container */
+    background-position: center; /* Center the image */
+    position: relative; /* Allows absolute positioning of overlay */
+    display: flex; /* Use flexbox for content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Horizontally center content */
+    justify-content: center; /* Vertically center content */
+    gap: 1.5rem; /* 24px space between heading and paragraph */
 }
 
+/* Dark overlay on hero background */
 .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(1, 10, 70, 0.5);
+    position: absolute; /* Position over the hero section */
+    left: 0; /* Align to left edge */
+    top: 0; /* Align to top edge */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(1, 10, 70, 0.5); /* Dark blue with 50% transparency */
 }
 
+/* Hero main heading */
 .hero h1 {
-    color: #f6f6f6;
-    z-index: 3;
-    text-align: center;
-    font-size: 2.5rem;
+    color: #f6f6f6; /* Very light gray (almost white) */
+    z-index: 3; /* Appear above overlay (higher number = closer to viewer) */
+    text-align: center; /* Center text horizontally */
+    font-size: 2.5rem; /* 40px font size */
 }
 
+/* Hero description paragraph */
 .hero p {
-    z-index: 3;
-    color: #f6f6f6;
-    font-size: 1.2rem;
-    text-align: center;
-    width: 90%;
-    max-width: 35rem;
+    z-index: 3; /* Appear above overlay */
+    color: #f6f6f6; /* Very light gray (almost white) */
+    font-size: 1.2rem; /* 19.2px font size */
+    text-align: center; /* Center text horizontally */
+    width: 90%; /* 90% of parent width */
+    max-width: 35rem; /* Maximum width of 560px */
 }
 
-/* Features */
+/* ========================================
+   FEATURES SECTION
+   ======================================== */
+
+/* Features section container */
 .features {
-    margin: 4rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    margin: 4rem 0; /* 64px top/bottom margin, no left/right margin */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* 32px space between intro and content */
 }
 
+/* Features introduction/header */
 .features-intro {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    gap: 0.5rem; /* 8px space between heading and paragraph */
+    align-items: center; /* Horizontally center content */
 }
 
+/* Features intro paragraph */
 .features-intro p {
-    font-size: 0.9rem;
-    text-align: center;
-    width: 90%;
+    font-size: 0.9rem; /* 14.4px font size */
+    text-align: center; /* Center text */
+    width: 90%; /* 90% of parent width */
 }
 
+/* Features cards container */
 .features-content {
-    width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    gap: 2rem;
+    width: 90%; /* 90% of viewport width */
+    max-width: 1280px; /* Maximum width of 1280px */
+    margin: 0 auto; /* Center container (0 top/bottom, auto left/right) */
+    display: grid; /* Use CSS Grid layout */
+    grid-template-columns: 1fr; /* Single column on mobile (1fr = one fraction of available space) */
+    grid-template-rows: repeat(3, auto); /* 3 rows, auto height based on content */
+    gap: 2rem; /* 32px space between cards */
 }
 
+/* Individual feature card */
 .features-content article {
-    background-color: blue;
-    padding: 2rem 1rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    background-color: blue; /* Blue background */
+    padding: 2rem 1rem; /* 32px top/bottom, 16px left/right */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    gap: 1rem; /* 16px space between items */
 }
 
+/* Feature card headings and paragraphs */
 .features-content h3,
 .features-content p {
-    color: #f6f6f6;
+    color: #f6f6f6; /* Very light gray text */
 }
 
+/* Feature card headings */
 .features-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* 19.2px font size */
 }
 
+/* Feature card paragraphs */
 .features-content p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    opacity: 90%;
+    font-size: 0.9rem; /* 14.4px font size */
+    line-height: 1.5; /* Line spacing (1.5 times font size) */
+    letter-spacing: 1px; /* 1px space between letters */
+    opacity: 90%; /* 90% opacity (slightly transparent) */
 }
 
+/* Feature card "Learn More" links */
 .features-content a {
-    background-color: gold;
-    color: black;
-    align-self: flex-start;
-    padding: 0.5rem 2rem;
-    border-radius: 10px;
+    background-color: gold; /* Gold/yellow background */
+    color: black; /* Black text */
+    align-self: flex-start; /* Align to the left (start of flex container) */
+    padding: 0.5rem 2rem; /* 8px top/bottom, 32px left/right */
+    border-radius: 10px; /* Rounded corners */
 }
 
-/* Pricing */
+/* ========================================
+   PRICING SECTION
+   ======================================== */
+
+/* Pricing section container */
 .pricing {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 4rem 0;
-    width: 100%;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* 32px space between intro and pricing cards */
+    margin: 4rem 0; /* 64px top/bottom margin, no left/right */
+    width: 100%; /* Full width */
 }
 
+/* Pricing section introduction */
 .pricing-intro {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    gap: 0.5rem; /* 8px space between items */
+    align-items: center; /* Horizontally center content */
 }
 
+/* Pricing intro paragraph */
 .pricing-intro p {
-    font-size: 0.9rem;
-    text-align: center;
-    width: 90%;
+    font-size: 0.9rem; /* 14.4px font size */
+    text-align: center; /* Center text */
+    width: 90%; /* 90% of parent width */
 }
 
+/* Pricing cards container */
 .pricing-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 1rem;
-    width: 100%;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack cards vertically on mobile */
+    gap: 2rem; /* 32px space between cards */
+    padding: 0 1rem; /* No top/bottom padding, 16px left/right */
+    width: 100%; /* Full width */
 }
 
+/* All links in pricing section */
 .pricing a {
-    font-weight: 600;
+    font-weight: 600; /* Semi-bold text */
 }
 
+/* Individual pricing card */
 .pricing-content article {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    border-radius: 15px;
-    transition: transform 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Border with 30% opacity black */
+    padding: 2rem 1rem; /* 32px top/bottom, 16px left/right */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    gap: 1rem; /* 16px space between items */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.2s ease-in-out; /* Smooth rotation animation (0.2 seconds) */
 }
 
+/* Pricing card buttons */
 .pricing-content a {
-    background-color: blue;
-    color: #f6f6f6;
-    align-self: flex-start;
-    font-size: 0.95rem;
-    padding: 0.7rem 2rem;
-    border-radius: 15px;
-    transition: transform 0.2s ease-in-out;
+    background-color: blue; /* Blue background */
+    color: #f6f6f6; /* Light gray text */
+    align-self: flex-start; /* Align button to the left */
+    font-size: 0.95rem; /* 15.2px font size */
+    padding: 0.7rem 2rem; /* 11.2px top/bottom, 32px left/right */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.2s ease-in-out; /* Smooth animation on hover */
 }
 
+/* Hover effect on pricing buttons */
 .pricing-content a:hover {
-    transform: translateY(3px);
+    transform: translateY(3px); /* Move button down 3px when hovered */
 }
+
+/* Second pricing card (featured/popular plan) */
 .pricing-content article:nth-child(2) {
-    background-color: blue;
-    color: #f6f6f6;
+    background-color: blue; /* Blue background */
+    color: #f6f6f6; /* Light gray text */
 }
 
+/* Button on second pricing card */
 .pricing-content article:nth-child(2) a {
-    background-color: gold;
-    color: black;
+    background-color: gold; /* Gold background */
+    color: black; /* Black text */
 }
 
+/* Hover effect on pricing cards */
 .pricing-content article:hover {
-    transform: rotate(2deg);
+    transform: rotate(2deg); /* Rotate card 2 degrees clockwise on hover */
 }
 
-/* Contact Us */
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+/* Contact section container */
 .contact {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 4rem 0;
-    width: 100%;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* 32px space between intro and form */
+    margin: 4rem 0; /* 64px top/bottom margin, no left/right */
+    width: 100%; /* Full width */
 }
 
+/* Contact section introduction */
 .contact-intro {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    gap: 0.5rem; /* 8px space between items */
+    align-items: center; /* Horizontally center content */
 }
 
+/* Contact intro paragraph */
 .contact-intro p {
-    font-size: 0.9rem;
-    text-align: center;
-    width: 90%;
+    font-size: 0.9rem; /* 14.4px font size */
+    text-align: center; /* Center text */
+    width: 90%; /* 90% of parent width */
 }
 
+/* Contact form */
 .contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 90%;
-    max-width: 45rem;
-    margin: 0 auto;
-    background-color: blue;
-    padding: 2rem 1rem;
-    border-radius: 15px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 1rem; /* 16px space between form fields */
+    width: 90%; /* 90% of viewport width */
+    max-width: 45rem; /* Maximum width of 720px */
+    margin: 0 auto; /* Center form (0 top/bottom, auto left/right) */
+    background-color: blue; /* Blue background */
+    padding: 2rem 1rem; /* 32px top/bottom, 16px left/right */
+    border-radius: 15px; /* Rounded corners */
 }
 
+/* Form labels */
 .contact label {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
-    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
+    font-size: 0.9rem; /* 14.4px font size */
+    font-weight: 600; /* Semi-bold text */
 }
 
+/* First name & Last name container, Email & Course container */
 .first-last,
 .email-course {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem; /* 16px space between fields */
 }
 
+/* Individual field containers in two-column layouts */
 .first-last > div,
 .email-course > div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack label and input vertically */
+    gap: 0.5rem; /* 8px space between label and input */
 }
 
+/* Comment/message field container */
 .comment {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack label and textarea vertically */
+    gap: 0.5rem; /* 8px space between label and textarea */
 }
 
+/* Text inputs and select dropdown in form */
 .contact form input,
 .contact form select{
-    outline: 0;
-    height: 2.5rem;
-    border-radius: 5px;
-    padding: 0 0.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    outline: 0; /* Remove default browser outline on focus */
+    height: 2.5rem; /* 40px height */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0 0.5rem; /* No top/bottom padding, 8px left/right */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Border with 30% opacity black */
 }
 
+/* Textarea for comments */
 .comment textarea {
-    min-height: 7rem;
-    padding: 0.5rem;
-    border-radius: 5px;
+    min-height: 7rem; /* Minimum height of 112px */
+    padding: 0.5rem; /* 8px padding on all sides */
+    border-radius: 5px; /* Rounded corners */
 }
 
+/* Submit button */
 .contact button {
-    background-color: gold;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 0.9rem 3rem;
-    border-radius: 15px;
-    font-weight: 600;
-    transition: filter 0.3s ease-in-out;
-    margin: 0.9rem 0;
-    align-self: flex-start;
-    cursor: pointer;
+    background-color: gold; /* Gold background */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Border with 30% opacity black */
+    padding: 0.9rem 3rem; /* 14.4px top/bottom, 48px left/right */
+    border-radius: 15px; /* Rounded corners */
+    font-weight: 600; /* Semi-bold text */
+    transition: filter 0.3s ease-in-out; /* Smooth brightness change on hover (0.3 seconds) */
+    margin: 0.9rem 0; /* 14.4px top/bottom margin, no left/right */
+    align-self: flex-start; /* Align button to the left on mobile */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
+/* Hover effect on submit button */
 .contact button:hover {
-    filter: brightness(0.9);
+    filter: brightness(0.9); /* Darken button to 90% brightness on hover */
 }
 
 
+/* ========================================
+   MEDIA QUERIES - TABLET SCREENS
+   ======================================== */
+
+/* Styles for screens 768px and wider (tablets and small desktops) */
 @media (min-width: 768px) {
-    /* Hero */
+    
+    /* HERO SECTION */
     .hero p {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Increase paragraph size to 20.8px */
     }
 
     .hero {
-        min-height: 60vh;
+        min-height: 60vh; /* Reduce hero height to 60% of viewport height */
     }
 
-    /* Features */
+    /* FEATURES SECTION */
     .features-content {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns (1fr each) */
+        grid-template-rows: auto; /* Single row with automatic height */
     }
 
-    /* Pricing */
+    /* PRICING SECTION */
     .pricing-content {
-        flex-direction: row;
+        flex-direction: row; /* Display cards side-by-side horizontally */
     }
 
     .pricing-content article {
-        width: calc(100% / 3);
+        width: calc(100% / 3); /* Each card takes 1/3 of container width */
     }
 
-    /* Contact-us */
+    /* CONTACT SECTION */
     .first-last,
     .email-course {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
     }
 
     .contact button {
-        align-self: center;
+        align-self: center; /* Center submit button horizontally */
     }
 
 } 
 
+/* ========================================
+   MEDIA QUERIES - DESKTOP SCREENS
+   ======================================== */
+
+/* Styles for screens 1000px and wider (desktops) */
 @media (min-width: 1000px) {
+    
+    /* Hide mobile navigation */
     .mobile {
-        display: none;
+        display: none; /* Completely hide mobile menu */
     }
 
+    /* Show desktop sign up button */
     header nav > a {
-        display: inline-block;
+        display: inline-block; /* Make button visible */
     }
 
+    /* Show desktop navigation links */
     header .desktop-nav-links {
-        display: flex;
-        gap: 2rem;
+        display: flex; /* Use flexbox for horizontal menu */
+        gap: 2rem; /* 32px space between menu items */
     }
 
+    /* Desktop navigation link styles */
     header .desktop-nav-links a {
-        color: black;
-        font-weight: 600;
-        font-size: 0.95rem;
+        color: black; /* Black text */
+        font-weight: 600; /* Semi-bold text */
+        font-size: 0.95rem; /* 15.2px font size */
     }
 
+    /* Hover effect on desktop nav links */
     header .desktop-nav-links a:hover {
-        color: blue;
+        color: blue; /* Change text color to blue on hover */
     }
 
+    /* Third menu item (has dropdown) */
     .desktop-nav-links li:nth-child(3) {
-        position: relative;
-        margin-bottom: 0.2rem;
+        position: relative; /* Allows absolute positioning of dropdown */
+        margin-bottom: 0.2rem; /* 3.2px bottom margin */
     }
 
-    /* Desktop dropdown */
+    /* DESKTOP DROPDOWN MENU */
     .desktop-nav-links ul {
-        position: absolute;
-        left: 0;
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        background-color: #f6f6f6;
-        width: fit-content;
-        padding: 2rem 1.5rem;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        position: absolute; /* Position relative to parent li */
+        left: 0; /* Align to left edge of parent */
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack dropdown items vertically */
+        gap: 1rem; /* 16px space between items */
+        background-color: #f6f6f6; /* Light gray background */
+        width: fit-content; /* Width adjusts to content */
+        padding: 2rem 1.5rem; /* 32px top/bottom, 24px left/right */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Very light border (10% opacity) */
     }
 
+    /* Desktop sign up button */
     header nav > a {
-        background-color: blue;
-        color: white;
-        padding: 0.5rem 2rem;
-        border-radius: 10px;
-        transition: filter 0.3s ease-in-out;
+        background-color: blue; /* Blue background */
+        color: white; /* White text */
+        padding: 0.5rem 2rem; /* 8px top/bottom, 32px left/right */
+        border-radius: 10px; /* Rounded corners */
+        transition: filter 0.3s ease-in-out; /* Smooth brightness change (0.3 seconds) */
     }
 
+    /* Hover effect on sign up button */
     header nav > a:hover {
-        filter: brightness(90%);
+        filter: brightness(90%); /* Darken to 90% brightness on hover */
     }
 
+    /* Show dropdown on hover */
     .desktop-nav-links li:nth-child(3):hover ul {
-        display: flex;
+        display: flex; /* Make dropdown visible when parent is hovered */
     }
 
-    /* Hero */
+    /* HERO SECTION */
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3.5rem; /* Increase heading size to 56px */
     }
 }
 
+/* ========================================
+   MEDIA QUERIES - LARGE DESKTOP SCREENS
+   ======================================== */
+
+/* Styles for screens 1500px and wider (large desktops) */
 @media (min-width: 1500px) {
+    
+    /* Center and constrain navigation bar width */
     header nav {
-        width: 80%;
-        max-width: 80rem;
-        margin: 0 auto;
+        width: 80%; /* Navigation takes 80% of header width */
+        max-width: 80rem; /* Maximum width of 1280px */
+        margin: 0 auto; /* Center navigation (0 top/bottom, auto left/right) */
     }
 }

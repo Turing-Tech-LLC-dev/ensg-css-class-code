@@ -283,7 +283,9 @@ ul.mobile-dropdown li:nth-child(4) a {
     flex-direction: column; /* Stack cards vertically on mobile */
     gap: 2rem; /* 32px space between cards */
     padding: 0 1rem; /* No top/bottom padding, 16px left/right */
-    width: 100%; /* Full width */
+    width: 90%; /* Full width */
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /* All links in pricing section */
@@ -439,6 +441,13 @@ ul.mobile-dropdown li:nth-child(4) a {
 /* Hover effect on submit button */
 .contact button:hover {
     filter: brightness(0.9); /* Darken button to 90% brightness on hover */
+}
+
+footer {
+    background-color: rgb(61, 61, 61);
+    color: #f6f6f6;
+    padding: 5rem 0;
+    text-align: center;
 }
 
 

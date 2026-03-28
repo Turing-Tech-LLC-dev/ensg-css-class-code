@@ -36,3 +36,7 @@ padding left = 130px
 padding right = 72px
 border left and right = 3 + 3 = 6
 */
+
+.box h2 {
+    text-shadow: 2px 2px 4px rgb(136, 133, 133);
+}
